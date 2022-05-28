@@ -18,6 +18,7 @@ Breaking
 .. bullet_list::
 
    -  Set minimum Unity version to 2021.3.3.
+   -  Wave variance for ShapeGerstner has been removed which will reduce overall foam strength.
 
 
 Preview
