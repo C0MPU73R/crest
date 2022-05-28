@@ -32,7 +32,7 @@ Shader "Crest/Inputs/Animated Waves/Gerstner Geometry"
 
     SubShader
     {
-        // Eith additive or alpha blend for geometry waves.
+        // Either additive or alpha blend for geometry waves.
         Blend [_BlendSrcMode] [_BlendDstMode]
         ZWrite Off
         ZTest Always
