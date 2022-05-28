@@ -28,6 +28,11 @@ Preview
    -  Added option to the Animated Waves settings to increase wave resolution to fix quality issues that appear especially in flowing water.
       See tooltip on this new option for instructions and more details.
 
+Changed
+^^^^^^^
+.. bullet_list::
+
+   -  Added ability to blend waves (effectively an override) instead of only having additive waves. Disable "Additive" on the *ShapeFFT* or *ShapeGerstner* when using with a *MeshRenderer* or *Spline* to use. Useful for preventing rivers from receiving ocean waves.
 
 Fixed
 ^^^^^
