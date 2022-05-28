@@ -8,7 +8,7 @@ Shader "Hidden/Crest/Inputs/Animated Waves/Gerstner Global"
 {
 	SubShader
 	{
-		// Additive blend everywhere
+		// Additive blend for global waves.
 		Blend One One
 		ZWrite Off
 		ZTest Always
