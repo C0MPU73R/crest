@@ -51,14 +51,13 @@ float2 IDtoUV(in float2 i_id, in float i_width, in float i_height)
 
 void SampleDisplacements(in Texture2DArray i_dispSampler, in float3 i_uv_slice, in float i_wt, inout float3 io_worldPos)
 {
-	const half3 data = i_dispSampler.SampleLevel(LODData_linear_clamp_sampler, i_uv_slice, 0.0);
+	const half3 data = i_dispSampler.SampleLevel(LODData_linear_clamp_sampler, i_uv_slice, 0.0).xyz;
 	io_worldPos += i_wt * data.xyz;
 }
 
 void SampleDisplacementsNormals(in Texture2DArray i_dispSampler, in float3 i_uv_slice, in float i_wt, in float i_invRes, in float i_texelSize, inout float3 io_worldPos, inout float2 io_nxz, inout half io_sss)
 {
-	const half4 data = i_dispSampler.SampleLevel(LODData_linear_clamp_sampler, i_uv_slice, 0.0);
-	const half3 disp = data.xyz;
+	const half3 disp = i_dispSampler.SampleLevel(LODData_linear_clamp_sampler, i_uv_slice, 0.0);
 	io_worldPos += i_wt * disp;
 
 	float3 dd = float3(i_invRes, 0.0, i_texelSize);
